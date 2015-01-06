@@ -9,5 +9,9 @@ class TestFailure(unittest.TestCase):
     def test_2_failing(self):
         self.assertTrue(False, "I know, this should always fail")
 
-    def test_3_ok(self):
+    @unittest.skip("This test is intentionally skipped")
+    def test_3_skip(self):
+        self.assertTrue(False)
+
+    def test_4_ok(self):
         self.assertTrue(True)
